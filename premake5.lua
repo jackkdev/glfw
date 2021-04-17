@@ -1,11 +1,9 @@
-outputdir = outputdir or "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
-
 project "GLFW"
   kind "StaticLib"
   language "C"
 
-  targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-  objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+  targetdir ("bin/" .. OutputDirectory .. "/%{prj.name}")
+  objdir ("bin-int/" .. OutputDirectory .. "/%{prj.name}")
 
   files
   {
